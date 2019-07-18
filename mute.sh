@@ -1,4 +1,5 @@
 #! /bin/sh
+#Built by 0x0J
 
 state=`amixer -D pulse set Capture toggle | gawk 'match($0, /(Front Left|Mono).*\[(.*)\]/, a) {print a[2]}'`
 if [ "$state" = "off" ]; then
